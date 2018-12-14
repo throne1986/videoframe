@@ -4,8 +4,8 @@
         $(document).ready(function () {
             $(window).resize(resizeIframe);
             $(window).resize();
-            $("input#imie").on("change", function () {
-                document.getElementById('videoframe').contentWindow.postMessage( "event=fieldchanged&fieldtype=" + "imie" + "&value=" + $("input#imie").val(), "*");
+            $("input#name").on("change", function () {
+                document.getElementById('videoframe').contentWindow.postMessage( "event=fieldchanged&fieldtype=" + "name" + "&value=" + $("input#name").val(), "*");
             });
 
         });
@@ -15,3 +15,5 @@
             $("iframe#videoframe").height( $("iframe#videoframe").width()*576/1024 );
 
         }
+
+    

@@ -96,7 +96,7 @@
             case "fieldchanged":
 
                 switch(fieldtype) {
-                    case "imie":
+                    case "name":
 
                           openSlide("powitalny", { value: value });
 
@@ -156,20 +156,20 @@
         }
         sampleImage.src = "images/download.jpg";
 
-        sound = new Howl({
-          src: ['audio/1001.mp3']
-        });
+        // sound = new Howl({
+        //   src: ['audio/1001.mp3']
+        // });
 
-        audioArray['imieStartboard'] = { position:3, howl: sound, duration: 0 };
+        // audioArray['nameStartboard'] = { position:3, howl: sound, duration: 0 };
 
-        sound.once('load', function(){
+        // sound.once('load', function(){
 
-            sound.seek(0.4);
-            sound.play();
+        //     sound.seek(0.4);
+        //     sound.play();
 
-            audioLoaded = true;
-            checkIfAllLoaded();
-        });
+        //     audioLoaded = true;
+        //     checkIfAllLoaded();
+        // });
 
 
 
@@ -177,8 +177,8 @@
 
     }
     function checkIfAllLoaded () {
-        if( imageLoaded==true && audioLoaded==true ) {
-
+        //if( imageLoaded==true && audioLoaded==true ) {
+        if( imageLoaded==true  ) {
             for(var audio in audioArray) {
                 console.log(audio);
                 audioArray[audio].duration = audioArray[audio].howl.duration();
