@@ -9,8 +9,12 @@
    var moviePowitalny = "https://skodavideo.s3-eu-west-1.amazonaws.com/skoda_gos_1168_m_11549.mp4";
    var movieName1 = "./videos/videoplayback.mp4"
    var movieNazwisko1 = "https://skodavideo.s3-eu-west-1.amazonaws.com/skoda_gos_1168_m_11549.mp4"
+   var movieMiasto1 = "./videos/jibebe.mp4"
+   var movieKod1 = "./videos/mov_bbb.mp4"
+   var movieEmail1 ="./videos/janusz.mp4"
+   var movieThanks = "./videos/darasa.mp4"
 
-   // creating animation 
+   // creating animation
    $(document).ready(function () {
        stage = new createjs.Stage("videocanvas");
        timeline = new createjs.Timeline();
@@ -23,7 +27,7 @@
    });
 
 
-   // creating ticker function for handling time 
+   // creating ticker function for handling time
    function tick() {
        timeline.gotoAndStop($("#playervideo")[0].currentTime * 1000);
 
@@ -86,6 +90,13 @@
        console.log(event, fieldtype, value);
 
        switch (event) {
+         
+         case "Submit":
+             openSlide("submitSlide", {
+                 value: value,
+             });
+          break;
+
            case "fieldchanged":
 
                switch (fieldtype) {
@@ -116,8 +127,25 @@
                        openSlide("nazwiskoSlide", {
                            value: value,
                        });
-                    break
-                       
+                    break;
+
+                    case "miasto":
+                        openSlide("miastoSlide", {
+                            value: value,
+                        });
+                     break;
+                     case "kod":
+                         openSlide("kodSlide", {
+                             value: value,
+                         });
+                      break;
+                      case "email":
+                          openSlide("emailSlide", {
+                              value: value,
+                          });
+                       break;
+
+
 
                    default:
                        break;
@@ -132,7 +160,7 @@
 
    function openSlide(slideName, params) {
        switch (slideName) {
-           case "powitalny":
+               case "powitalny":
                openPowitalny(params);
                break;
                case "nameSlide":
@@ -140,6 +168,18 @@
                break;
                case "nazwiskoSlide":
                openNazwisko(params);
+               break;
+               case "miastoSlide":
+               openMiasto(params);
+               break;
+               case "kodSlide":
+               openKod(params);
+               break;
+               case "emailSlide":
+               openEmail(params);
+               break;
+               case "submitSlide":
+               openSubmit(params);
                break;
        }
 
@@ -159,6 +199,19 @@
    function openNazwisko(_params) {
     playVideo(movieNazwisko1);
 
+   }
+   function openMiasto(_params){
+     playVideo(movieMiasto1);
+   }
+   function openKod(_params){
+     playVideo(movieKod1);
+   }
+
+   function openEmail(_params){
+     playVideo(movieEmail1)
+   }
+   function  openSubmit(_params){
+     playVideo(movieThanks);
    }
    function openPowitalny(_params) {
 
