@@ -25,14 +25,14 @@
                 document.getElementById('videoframe').contentWindow.postMessage( "event=fieldchanged&fieldtype=" + "email" + "&value=" + $("input#email").val(), "*");
             });
 
-            //play a video when a user clicks submit button this is not working !!!!!!!
-            $("#button").on("click", function(){
-              document.getElementById('videoframe').contentWindow.postMessage(
-                  JSON.stringify({
-                    event: 'openSubmit'
-                  }), "*")
-                   console.log('openSubmit');
-            })
+            // //play a video when a user clicks submit button this is not working !!!!!!!
+            // $("#button").on("click", function(){
+            //   document.getElementById('videoframe').contentWindow.postMessage(
+            //       JSON.stringify({
+            //         event: 'submitSlide'
+            //       }), "*")
+            //        console.log('submitSlide');
+            // })
 
 
         });
@@ -42,3 +42,16 @@
             $("iframe#videoframe").height( $("iframe#videoframe").width()*576/1024 );
 
         }
+
+
+            // $(document).ready(function(){ // launch when DOM is fully loaded
+            //     var form =document.getElementById('formData');
+            //     form.onsubmit = function(e){
+            //       e.preventDefault();
+            //       var result =document.getElementById('result');
+            //       result.innerHTML ="hi" + form.name.value;
+            //
+            //           this.reset();
+            //     }
+            //
+            //     });
