@@ -6,9 +6,9 @@
 
    var autoplay = true;
 
-   var moviePowitalny = "https://skodavideo.s3-eu-west-1.amazonaws.com/skoda_gos_1168_m_11549.mp4";
+   var moviePowitalny = "videos/jibebe.mp4";
    var movieName1 = "./videos/videoplayback.mp4"
-   var movieNazwisko1 = "https://skodavideo.s3-eu-west-1.amazonaws.com/skoda_gos_1168_m_11549.mp4"
+   var movieNazwisko1 ="./videos/janusz.mp4"
    var movieMiasto1 = "./videos/jibebe.mp4"
    var movieKod1 = "./videos/mov_bbb.mp4"
    var movieEmail1 ="./videos/janusz.mp4"
